@@ -2,13 +2,13 @@ Gain-Coins is a mxn board game, in which the number of coins in each square incr
 
 2 3 4\
 5 7 3\
-3 8 1\
+3 8 1
 
 Then after enlarge move the number of coins will be:
 
 8 10 9\
 14 17 11\
-13 19 10\
+13 19 10
 
 Input Format
 
