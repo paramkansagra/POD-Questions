@@ -25,12 +25,8 @@ for i in range(r):
     temp = []
     for j in range(c):
         final = data[i][j]
-        minn = 9999
-        maxx = -9999
-        for k in range(r):
-            minn = min(data[k][j],minn)
-        for k in range(c):
-            maxx = max(data[i][k],maxx)
+        minn = min([data[k][j] for k in range(r)])
+        maxx = max([data[i][k] for k in range(c)])
         temp.append(final+minn+maxx)
     new.append(temp)
 for i in new:
