@@ -2,11 +2,11 @@ Given a string ‘s’ with four different letters in it, write a C program to e
 
 When there are more than one valid string with the maximum possible length, retain the lexicographically lesser string. A string s1 is said to be lexicographically lesser than s2 when s1 will come first in dictionary. For example, consider the string s, aabbcddc with four different letters a, b, c and d. The valid strings that shall be formed with any two letters are:
 
-aabb – When letters c and d are removed
-aacc – When letters b and d are removed
-aadd – When letters a and a are removed
-bbcc – When letters a and d are removed
-bbdd – When letters a and c are removed
+aabb – When letters c and d are removed\
+aacc – When letters b and d are removed\
+aadd – When letters a and a are removed\
+bbcc – When letters a and d are removed\
+bbdd – When letters a and c are removed\
 cddc – When letters a and b are removed
 
 The maximum length of the strings that can be formed is four and lexicographically least string is aabb, so print aabb.
@@ -21,7 +21,7 @@ Lexicographically least and maximum length valid string retained after removing 
 
 Observations
 
-First make a string by removing any 2 characters
-Then check if it is valid or not
-If valid then check it has the max length
+First make a string by removing any 2 characters\
+Then check if it is valid or not\
+If valid then check it has the max length\
 If there are multiple elements with max length find the one which is minimum lexicographically
