@@ -10,11 +10,13 @@ int main(){
     cin>>n;
 
     // make the array
-    int* arr = new int[n];
+    vector<int> arr;
 
     // take input of the array
     for(int i=0;i<n;i++){
-        cin>>arr[i];
+        int temp;
+        cin>>temp;
+        arr.push_back(temp);
     }
 
     // define the vector pos
@@ -42,9 +44,6 @@ int main(){
     }cout<<endl;
     if(flag) cout<<"Happy"<<endl;
     else cout<<"Angry"<<endl;
-
-    // free the array
-    delete []arr;
 
     return 0;
 }
