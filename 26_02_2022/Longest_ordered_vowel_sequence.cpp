@@ -44,11 +44,10 @@ void maxx_unique(vector<string> words){
         int count = 0;
         string x = "";
         for(int j=0;j<words[i].size();j++){
-            if(vovels.find(words[i][j]) != string::npos){
-                if(x.find(words[i][j]) == string::npos){
-                    x += words[i][j];
-                    count++;
-                }
+            if(vovels.find(words[i][j]) != string::npos && x.find(words[i][j]) == string::npos){
+                x += words[i][j];
+                count++;
+
             }
         }
         if(count>maxx){
@@ -61,8 +60,8 @@ void maxx_unique(vector<string> words){
         }
     }
 
-    for(int i=0;i<data.size();i++){
-        cout<<data[i]<<endl;
+    for(auto i:data){
+        cout<<i<<endl;
     }
 
 }
