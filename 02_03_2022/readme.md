@@ -3,15 +3,17 @@ Print the Pattern
 
 Given the value of ‘n’ write a C program to print a special rectangular pattern with dots and starts. When the value of n is 5 the rectangle looks as below:
 
-. . . . * . . . .
+/. . . . * . . . .
 
-. . . * . * . . .
+/. . . * . * . . .
 
-. . * . . . * . .
+/. . * . . . * . .
 
-. * . . . . . * .
+/. * . . . . . * .
 
-* . . . . . . . *
+/* . . . . . . . *
+
+(Ignore the slash in first part in output string)
 
 Input Format
 
