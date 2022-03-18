@@ -1,4 +1,5 @@
 Help to Shift Library
+
 In a village, the local library is to be shifted from one place to the other. Books are to be taken from the old location to the new one, there are no vehicles to help the librarian. Two children Ramu and Somu volunteered to help the librarian in the shifting process. Since there are many books shifting will require many trips. The librarian thinks that the children will become tired over time. So he plans to shift the bigger books first and then the smaller books. To make the shifting process interesting he asks Ramu to carry ‘i’ books and Somu to carry ‘2 * i’ books in the odd trips and during even trips Ramu has to carry ‘2*i’ books and Somu has to carry ‘i’ books. Where ‘i’ is the trip number and the trips are numbered from 1.
 
 Given the total number of books in the library, write a C program to find out the number of trips required to shift the books, number of books carried by Ramu, number of books carried by Somu and the name of the child that keep the last book in the new location of the library.
