@@ -4,11 +4,6 @@
 
 using namespace std;
 
-string reversed(string n){
-    reverse(n.begin(),n.end());
-    return n;
-}
-
 int main(){
     
     string n;
@@ -22,15 +17,10 @@ int main(){
         else{
             bool rev = true;
             string x = "";
+            string temp = s;
             for(int j=0;j<n[i]-'0';j++){
-                if(rev){
-                    x += reversed(s);
-                    rev = false;
-                }   
-                else{
-                    x += s;
-                    rev = true;
-                }
+                reverse(temp.begin(),temp.end());
+                x += temp;
             }
             s += x;
         }
