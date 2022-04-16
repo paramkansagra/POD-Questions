@@ -9,18 +9,12 @@ int main(){
     cin>>n;
 
     while(n--){
-        int x,y,z;
+        float x,y,z;
         cin>>x>>y>>z;
-
-        int count = 0;
-        while(z>=x){
-            count += y;
-            z -= (2/3)*x;
-        }
-
-        if(round(z) == x) count += y;
-
-        cout<<count<<endl;
+        
+        float ans = y * ((z - x + 0.01) / (x - x / 3) + 1);
+        ans = round(ans);
+        cout<<ans<<endl;
     }
 
     return 0;
