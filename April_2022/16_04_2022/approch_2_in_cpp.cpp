@@ -19,27 +19,14 @@ int main(){
     vector<int> final;
 
     for(int i=0;i<n;i++){
-        int temp1 = data[i];
-        int temp2 = m;
+        int temp = data[i]^m;
         int count = 0;
-
-        while(temp1 != 0 && temp2 != 0){
-            if(temp1&1 != temp2&1){
+        while(temp != 0){
+            if(temp&1 == 1){
                 count++;
             }
-            temp1 = temp1>>1;
-            temp2 = temp2>>1;
+            temp = temp >>1;
         }
-
-        while(temp1 != 0){
-            count++;
-            temp1 = temp1>>1;
-        }
-        while(temp2 != 0){
-            count++;
-            temp2 = temp2>>1;
-        }
-
         if(count<dis){
             dis = count;
             final.clear();
