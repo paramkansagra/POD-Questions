@@ -1,25 +1,86 @@
-Logo with Letters
+Derivative Index of a string
 
-A owner of a car manufacturing company introduces a competition to design a logo of size mxn with letters ‘l’, ‘z’ and ‘x’. The logo is selected only if all the three letters are used. The owner likes the letter ‘l’ , So he decides to give some money for each ‘l’ that comes in ‘l’ shape in the logo.
+A string S is said to be  derivable from a string 'w'  if 
 
-For example, if the logo is
+1) S is a substring of W.
 
-l l x
+For eg., S=bcd,  W= abcde.
 
-l l l
+Here, we say that S is a derivative of W of level 0. 
 
-l l z
+2). S is made up of a few symbols from W, without changing the order in which the symbols appear in W.
 
-then the number of ‘l’ shapes are three. Given the dimension of the logo and the letters in it write a C++ code to print the number of ‘l’ shapes in it formed with letter ‘l’.
+S= abcd ; W = taxbyced.
 
-Input Format
+Here the order of the symbols: a,b,c,d (these are the symbols that appear in S) in S is the same as that of those symbols in W.  By saying `order of a,b,c,d is same as in S and W', we mean like : `If `b' appears before 'a' in S, 'b' appears before 'a' in W also.
 
-First line contains the number of rows, r
+Here we say that S is derivative of W of level 1
 
-Next line contains the number of columns, c
+3) S is made up of symbols from W by changing the order in which they appear in W.
 
-Next ‘r’ lines contain the elements in each row separated by a space
+For Eg. S=abcd; W=bsacd.
 
-Output Format
+Here 'a' appears after 'b' in W, but, a appears before b in W.
 
-Print the count of ‘L’ shapes formed with letter ‘l’ for valid logos and print Invalid otherwise
+Here, we say that S is aderivative of level 2.  
+
+Derivative Index:
+
+If S is a derivative of W, we compute the derivative index as follows.
+
+1. The derivative index is zero, for the derivatives of level 0 and 1.
+
+2. The derivative index for the derivatives of level 2 is calculated as follows:
+
+We denote by Pw(a), is the the position index of the symbol a in W.  If a occurs in more than one position in W, PW(a) will be the position index  with the smallest index . If W=aabab, PW(a)=1 and PW(b) = 3.
+
+If S is derivative of W of level 2, the derivative index =  Σa in S   (Pw(a) - PS(a).)
+
+Eg.  S= abcd W= btacd : Here PS(a)=1, PS(b)=2, PS(c)=3, PS(d)=4; PW(a)=3, PW(b)=1,  PW(c)=4, PW(d)=5
+
+So, the derivative index = (3-1) + (1-2) +(4-3) + (5-4) = 2.
+
+Note : If none of the symbols of S are in W, then we say that S is not a derivative of W.  
+
+Given two words W and S, Write a code to compute the derivative levels , derivative index when S is a derivative of W and the derivative level, derivative index when  is aderivative of S.
+
+If S is not aderivative of W (or W is not a derivative of S), your program should print -1 and there is no derivative index for this.
+
+Input format:
+
+Enter the first Word S
+
+Enter the second  Word W :
+
+Output format:
+
+If S is a derivative of W, 
+
+output the level of the derivative
+
+Output the respective derivative index
+
+If S is not a derivative of W, Output  -1.
+
+If Wis a derivative of S:
+
+output the level of the derivative
+
+Output the respective derivative index
+
+If W is not a derivative of S Output  -1.
+
+Illustration:
+
+Input 
+eb
+
+abcdef
+
+output:
+
+3
+
+4
+
+-1
